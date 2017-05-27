@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ChangMovie</string>
+
+    <string name="net_not_connect">网络未连接</string>
+    <string name="no_article">暂无文章</string>
+    <string name="prompt_net_error_reload">点击屏幕&#160;&#160;重新加载</string>
+
+</resources>

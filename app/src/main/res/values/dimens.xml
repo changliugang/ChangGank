@@ -1,0 +1,49 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin_quarter">4dp</dimen>
+    <dimen name="activity_vertical_margin_quarter">4dp</dimen>
+    <dimen name="activity_horizontal_margin_half">8dp</dimen>
+    <dimen name="activity_vertical_margin_half">8dp</dimen>
+    <dimen name="textview_vertical_margin">4dp</dimen>
+
+    <dimen name="text_fontsize0">26sp</dimen>
+    <!--58px 1080p下，3px接近于1sp-->
+    <dimen name="text_fontsize1">22sp</dimen>
+    <!--48px-->
+    <dimen name="text_fontsize2">18sp</dimen>
+    <!--44px-->
+    <dimen name="text_fontsize3">16sp</dimen>
+    <!--40px-->
+    <dimen name="text_fontsize4">14sp</dimen>
+    <!--36px-->
+    <dimen name="text_fontsize5">12sp</dimen>
+    <!--30px-->
+    <dimen name="text_fontsize6">10sp</dimen>
+
+    <!--新版 间隔 此换算是在1080p下-->
+    <dimen name="space_204dp">204dp</dimen>
+    <dimen name="space_158dp">158dp</dimen>
+    <dimen name="space_114dp">114dp</dimen>
+    <dimen name="space_80dp">80dp</dimen>
+    <dimen name="space_64dp">64dp</dimen>
+    <dimen name="space_56dp">56dp</dimen>
+    <dimen name="space_54dp">54dp</dimen>
+    <dimen name="space_48dp">48dp</dimen>
+    <dimen name="space_40dp">40dp</dimen>
+    <dimen name="space_32dp">32dp</dimen>
+    <dimen name="space_30dp">30dp</dimen>
+    <dimen name="space_26dp">26dp</dimen>
+    <dimen name="space_18dp">18dp</dimen>
+    <dimen name="space_16dp">16dp</dimen>
+    <dimen name="space_12dp">12dp</dimen>
+    <dimen name="space_10dp">10dp</dimen>
+    <dimen name="space_6dp">6dp</dimen>
+    <dimen name="space_4dp">4dp</dimen>
+    <dimen name="space_1dp">1dp</dimen>
+    <dimen name="space_8dp">8dp</dimen>
+
+    <dimen name="item_article_icon_wh">60dp</dimen>
+
+</resources>

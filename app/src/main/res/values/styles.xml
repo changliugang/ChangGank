@@ -1,0 +1,100 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--新版颜色样式-->
+    <style name="black">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="white">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="gray_text">
+        <item name="android:textColor">@color/gray_text</item>
+    </style>
+
+    <!--新版字体样式-->
+    <!--黑色各种字体-->
+    <style name="text_fontsize1_black" parent="black">
+        <item name="android:textSize">@dimen/text_fontsize1</item>
+    </style>
+
+    <style name="text_fontsize2_black" parent="black">
+        <item name="android:textSize">@dimen/text_fontsize2</item>
+    </style>
+
+    <style name="text_fontsize3_black" parent="black">
+        <item name="android:textSize">@dimen/text_fontsize3</item>
+    </style>
+
+    <style name="text_fontsize4_black" parent="black">
+        <item name="android:textSize">@dimen/text_fontsize4</item>
+    </style>
+
+    <style name="text_fontsize5_black" parent="black">
+        <item name="android:textSize">@dimen/text_fontsize5</item>
+    </style>
+
+    <style name="text_fontsize6_black" parent="black">
+        <item name="android:textSize">@dimen/text_fontsize6</item>
+    </style>
+
+    <!--灰色各种字体-->
+    <style name="text_fontsize1_gray" parent="gray_text">
+        <item name="android:textSize">@dimen/text_fontsize1</item>
+    </style>
+
+    <style name="text_fontsize2_gray" parent="gray_text">
+        <item name="android:textSize">@dimen/text_fontsize2</item>
+    </style>
+
+    <style name="text_fontsize3_gray" parent="gray_text">
+        <item name="android:textSize">@dimen/text_fontsize3</item>
+    </style>
+
+    <style name="text_fontsize4_gray" parent="gray_text">
+        <item name="android:textSize">@dimen/text_fontsize4</item>
+    </style>
+
+    <style name="text_fontsize5_gray" parent="gray_text">
+        <item name="android:textSize">@dimen/text_fontsize5</item>
+    </style>
+
+    <style name="text_fontsize6_gray" parent="gray_text">
+        <item name="android:textSize">@dimen/text_fontsize6</item>
+    </style>
+
+    <!--白色各种字体-->
+    <style name="text_fontsize1_white" parent="white">
+        <item name="android:textSize">@dimen/text_fontsize1</item>
+    </style>
+
+    <style name="text_fontsize2_white" parent="white">
+        <item name="android:textSize">@dimen/text_fontsize2</item>
+    </style>
+
+    <style name="text_fontsize3_white" parent="white">
+        <item name="android:textSize">@dimen/text_fontsize3</item>
+    </style>
+
+    <style name="text_fontsize4_white" parent="white">
+        <item name="android:textSize">@dimen/text_fontsize4</item>
+    </style>
+
+    <style name="text_fontsize5_white" parent="white">
+        <item name="android:textSize">@dimen/text_fontsize5</item>
+    </style>
+
+    <style name="text_fontsize6_white" parent="white">
+        <item name="android:textSize">@dimen/text_fontsize6</item>
+    </style>
+
+</resources>

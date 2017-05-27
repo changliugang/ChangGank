@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_toLeftOf="@+id/item_article_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/item_article_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="从TabLayout源码告诉你使用它的正确姿势，让你马上爱上它"/>
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/item_article_icon"
+            android:layout_width="@dimen/item_article_icon_wh"
+            android:layout_height="@dimen/item_article_icon_wh"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
