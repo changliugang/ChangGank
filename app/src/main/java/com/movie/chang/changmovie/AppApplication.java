@@ -27,7 +27,6 @@ public class AppApplication extends Application {
         //JPushInterface.init(this);
         // log文件输出设置
         Loglg.init(BuildConfig.DEBUG);
-        Loglg.d("AppApplication onCreate");
         // 初始化环信
 //        initEasemob();
         //开发时设置为true，发布时设置为false

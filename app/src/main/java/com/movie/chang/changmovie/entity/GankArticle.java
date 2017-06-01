@@ -78,9 +78,10 @@ public class GankArticle {
 
     public List<String> getImages() {
         List<String> imagesWithLimit = new ArrayList<>();
-        for (String imgUrl : images) {
-            imagesWithLimit.add(imgUrl+"?imageView2/0/w/100");
-        }
+        if (images != null)
+            for (String imgUrl : images) {
+                imagesWithLimit.add(imgUrl + "?imageView2/0/w/100");
+            }
         return imagesWithLimit;
     }
 
@@ -105,7 +106,7 @@ public class GankArticle {
     }
 
     public String getWho() {
-        if (TextUtils.isEmpty(who)){
+        if (TextUtils.isEmpty(who)) {
             return "无名大神";
         }
         return who;

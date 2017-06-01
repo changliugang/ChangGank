@@ -6,13 +6,9 @@ import android.support.v4.view.ViewPager;
 
 import com.movie.chang.changmovie.R;
 import com.movie.chang.changmovie.adapter.ArticlePageAdapter;
-import com.movie.chang.changmovie.retrofit.RetrofitFactory;
-import com.movie.chang.changmovie.retrofit.api.GankApi;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
 
 public class MainActivity extends BaseActivity {
 
@@ -29,8 +25,8 @@ public class MainActivity extends BaseActivity {
 
         ArticlePageAdapter adapter = new ArticlePageAdapter(getSupportFragmentManager());
         viewpager.setAdapter(adapter);
+        viewpager.setOffscreenPageLimit(3);
         tablayout.setupWithViewPager(viewpager);
-//        request();
     }
 
 

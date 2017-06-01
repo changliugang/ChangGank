@@ -6,11 +6,11 @@ import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
-import android.text.format.DateFormat;
-import android.view.LayoutInflater;
+import android.text.format.DateUtils;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
@@ -23,7 +23,6 @@ import com.movie.chang.changmovie.retrofit.api.GankApi;
 import com.movie.chang.changmovie.utils.RefreshHelper;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import me.xdj.view.SimpleMultiStateView;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -35,7 +34,7 @@ import static me.xdj.view.MultiStateView.STATE_CONTENT;
  * Created by changliugang on 2017/5/27 14:19
  * mail：changliugang@sina.com
  */
-public class FragmentArticle extends BaseFragment {
+public class FragmentArticle extends LazyLoadFragment {
 
     private static final String ARG_TIMELINE_TYPE = "ARTICLE_TYPE";
     @BindView(R.id.list_recyclerview)
@@ -67,12 +66,17 @@ public class FragmentArticle extends BaseFragment {
         type = getArguments().getInt(ARG_TIMELINE_TYPE);
     }
 
-    @Nullable
+//       @Nullable
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+//        View view = inflater.inflate(R.layout.fragment_article, container, false);
+//        ButterKnife.bind(this, view);
+//        return view;
+//    }
+
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_article, container, false);
-        ButterKnife.bind(this, view);
-        return view;
+    public int getLayout() {
+        return R.layout.fragment_article;
     }
 
     @Override
@@ -84,8 +88,13 @@ public class FragmentArticle extends BaseFragment {
             protected void convert(BaseViewHolder baseViewHolder, GankArticle article) {
                 baseViewHolder.setText(R.id.item_article_title, article.getDesc());
                 baseViewHolder.setText(R.id.item_article_author, article.getWho());
-                baseViewHolder.setText(R.id.item_article_publish_date, DateFormat.
-                        format("yyyy-MM-dd HH:mm:ss", article.getPublishedAt().getTime()));
+//                baseViewHolder.setText(R.id.item_article_publish_date, FormatCurrentDate.
+//                        getTimeRange(getActivity(),article.getPublishedAt()));
+                baseViewHolder.setText(R.id.item_article_publish_date,  DateUtils.getRelativeTimeSpanString(getActivity(), //格式化时间，最多显示到分钟。最后参数设定显示的格式
+                        article.getPublishedAt().getTime()));
+                if (article.getImages() != null && article.getImages().size() > 0)
+                    Glide.with(FragmentArticle.this).load(article.getImages().get(0))
+                            .into((ImageView) baseViewHolder.getView(R.id.item_article_icon));
             }
         };
 
@@ -116,12 +125,17 @@ public class FragmentArticle extends BaseFragment {
             @Override
             public void onSimpleItemClick(BaseQuickAdapter adapter, View view, int position) {
                 GankArticle item = mAdapter.getItem(position);
-                Intent intent = new Intent(getActivity(),WebViewActivity.class);
-                intent.putExtra(WebViewActivity.WEBVIEW_TITLE,item.getDesc());
-                intent.putExtra(WebViewActivity.WEBVIEW_URL,item.getUrl());
+                Intent intent = new Intent(getActivity(), WebViewActivity.class);
+                intent.putExtra(WebViewActivity.WEBVIEW_TITLE, item.getDesc());
+                intent.putExtra(WebViewActivity.WEBVIEW_URL, item.getUrl());
                 startActivity(intent);
             }
         }).bulid().work();
+    }
+
+    @Override
+    public void loadData() {
+        super.loadData();
         request();
     }
 
