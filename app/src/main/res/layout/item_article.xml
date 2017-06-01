@@ -1,23 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_10dp">
 
         <RelativeLayout
-            android:layout_toLeftOf="@+id/item_article_icon"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/space_10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/item_article_icon">
+
             <TextView
                 android:id="@+id/item_article_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:maxLines="1"
                 android:ellipsize="end"
-                android:text="从TabLayout源码告诉你使用它的正确姿势，让你马上爱上它"/>
+                android:maxLines="2"
+                android:textSize="@dimen/text_fontsize3"
+                android:text="，让你马上爱上它" />
+
+            <TextView
+                android:id="@+id/item_article_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_article_title"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="@dimen/text_fontsize5"
+                android:layout_marginRight="@dimen/space_10dp"
+                android:text="changliugang" />
+
+            <TextView
+                android:id="@+id/item_article_publish_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/item_article_author"
+                android:layout_toRightOf="@+id/item_article_author"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="@dimen/text_fontsize5"
+                android:text="2017-11-10" />
 
 
         </RelativeLayout>
@@ -27,10 +58,9 @@
             android:id="@+id/item_article_icon"
             android:layout_width="@dimen/item_article_icon_wh"
             android:layout_height="@dimen/item_article_icon_wh"
-            android:layout_alignParentRight="true"/>
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_launcher" />
     </RelativeLayout>
-
-
 
 
 </LinearLayout>

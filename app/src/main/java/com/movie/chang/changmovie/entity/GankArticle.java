@@ -1,5 +1,7 @@
 package com.movie.chang.changmovie.entity;
 
+import android.text.TextUtils;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -103,6 +105,9 @@ public class GankArticle {
     }
 
     public String getWho() {
+        if (TextUtils.isEmpty(who)){
+            return "无名大神";
+        }
         return who;
     }
 
